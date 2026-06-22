@@ -1,0 +1,57 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "KinesisRead",
+      "Effect": "Allow",
+      "Action": [
+        "kinesis:DescribeStream",
+        "kinesis:DescribeStreamSummary",
+        "kinesis:DescribeStreamConsumer",
+        "kinesis:DescribeStreamConsumerSummary",
+        "kinesis:GetRecords",
+        "kinesis:GetShardIterator",
+        "kinesis:ListShards",
+        "kinesis:ListStreamConsumers",
+        "kinesis:SubscribeToShard"
+      ],
+      "Resource": "arn:aws:kinesis:EmployeeStream"
+    },
+    {
+      "Sid": "KinesisList",
+      "Effect": "Allow",
+      "Action": [
+        "kinesis:ListStreams"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3Bucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": "arn:aws:s3:::kinesis-example"
+    },
+    {
+      "Sid": "S3Object",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": "arn:aws:s3:::kinesis-example/*"
+    },
+    {
+      "Sid": "CloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
