@@ -1,6 +1,4 @@
-# Amazon Kinesis Service
-
-## Project Overview
+# Amazon Kinesis Service(Project Overview)
 
 This project demonstrates a real-time event-driven architecture using **Spring Boot**, **Amazon Kinesis**, **AWS Lambda**, and **Amazon S3**.
 
@@ -102,11 +100,3 @@ Store File in S3
 * Easy AWS Integration
 
 ---
-
-## Future Enhancements
-
-* CloudWatch Monitoring
-* SNS Notifications
-* SQS Dead Letter Queue
-* Kinesis Firehose
-* DynamoDB Integration
